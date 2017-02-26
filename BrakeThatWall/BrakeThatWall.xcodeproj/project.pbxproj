@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30701E638C3C0067F9CC /* AppDelegate.swift */; };
+		232A30731E638C3C0067F9CC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 232A30721E638C3C0067F9CC /* GameScene.sks */; };
+		232A30751E638C3C0067F9CC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 232A30741E638C3C0067F9CC /* Actions.sks */; };
+		232A30771E638C3C0067F9CC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30761E638C3C0067F9CC /* GameScene.swift */; };
+		232A30791E638C3C0067F9CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30781E638C3C0067F9CC /* GameViewController.swift */; };
+		232A307C1E638C3C0067F9CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232A307A1E638C3C0067F9CC /* Main.storyboard */; };
+		232A307E1E638C3C0067F9CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232A307D1E638C3C0067F9CC /* Assets.xcassets */; };
+		232A30811E638C3C0067F9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232A307F1E638C3C0067F9CC /* LaunchScreen.storyboard */; };
+		232A308C1E638C3C0067F9CC /* BrakeThatWallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A308B1E638C3C0067F9CC /* BrakeThatWallTests.swift */; };
+		232A30971E638C3C0067F9CC /* BrakeThatWallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30961E638C3C0067F9CC /* BrakeThatWallUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		232A30881E638C3C0067F9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 232A30651E638C3C0067F9CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 232A306C1E638C3C0067F9CC;
+			remoteInfo = BrakeThatWall;
+		};
+		232A30931E638C3C0067F9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 232A30651E638C3C0067F9CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 232A306C1E638C3C0067F9CC;
+			remoteInfo = BrakeThatWall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		232A306D1E638C3C0067F9CC /* BrakeThatWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrakeThatWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		232A30701E638C3C0067F9CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		232A30721E638C3C0067F9CC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		232A30741E638C3C0067F9CC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		232A30761E638C3C0067F9CC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		232A30781E638C3C0067F9CC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		232A307B1E638C3C0067F9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		232A307D1E638C3C0067F9CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		232A30801E638C3C0067F9CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		232A30821E638C3C0067F9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232A30871E638C3C0067F9CC /* BrakeThatWallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrakeThatWallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		232A308B1E638C3C0067F9CC /* BrakeThatWallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrakeThatWallTests.swift; sourceTree = "<group>"; };
+		232A308D1E638C3C0067F9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232A30921E638C3C0067F9CC /* BrakeThatWallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrakeThatWallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		232A30961E638C3C0067F9CC /* BrakeThatWallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrakeThatWallUITests.swift; sourceTree = "<group>"; };
+		232A30981E638C3C0067F9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		232A306A1E638C3C0067F9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A30841E638C3C0067F9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A308F1E638C3C0067F9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		232A30641E638C3C0067F9CC = {
+			isa = PBXGroup;
+			children = (
+				232A306F1E638C3C0067F9CC /* BrakeThatWall */,
+				232A308A1E638C3C0067F9CC /* BrakeThatWallTests */,
+				232A30951E638C3C0067F9CC /* BrakeThatWallUITests */,
+				232A306E1E638C3C0067F9CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		232A306E1E638C3C0067F9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				232A306D1E638C3C0067F9CC /* BrakeThatWall.app */,
+				232A30871E638C3C0067F9CC /* BrakeThatWallTests.xctest */,
+				232A30921E638C3C0067F9CC /* BrakeThatWallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		232A306F1E638C3C0067F9CC /* BrakeThatWall */ = {
+			isa = PBXGroup;
+			children = (
+				232A30701E638C3C0067F9CC /* AppDelegate.swift */,
+				232A30721E638C3C0067F9CC /* GameScene.sks */,
+				232A30741E638C3C0067F9CC /* Actions.sks */,
+				232A30761E638C3C0067F9CC /* GameScene.swift */,
+				232A30781E638C3C0067F9CC /* GameViewController.swift */,
+				232A307A1E638C3C0067F9CC /* Main.storyboard */,
+				232A307D1E638C3C0067F9CC /* Assets.xcassets */,
+				232A307F1E638C3C0067F9CC /* LaunchScreen.storyboard */,
+				232A30821E638C3C0067F9CC /* Info.plist */,
+			);
+			path = BrakeThatWall;
+			sourceTree = "<group>";
+		};
+		232A308A1E638C3C0067F9CC /* BrakeThatWallTests */ = {
+			isa = PBXGroup;
+			children = (
+				232A308B1E638C3C0067F9CC /* BrakeThatWallTests.swift */,
+				232A308D1E638C3C0067F9CC /* Info.plist */,
+			);
+			path = BrakeThatWallTests;
+			sourceTree = "<group>";
+		};
+		232A30951E638C3C0067F9CC /* BrakeThatWallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				232A30961E638C3C0067F9CC /* BrakeThatWallUITests.swift */,
+				232A30981E638C3C0067F9CC /* Info.plist */,
+			);
+			path = BrakeThatWallUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		232A306C1E638C3C0067F9CC /* BrakeThatWall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232A309B1E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWall" */;
+			buildPhases = (
+				232A30691E638C3C0067F9CC /* Sources */,
+				232A306A1E638C3C0067F9CC /* Frameworks */,
+				232A306B1E638C3C0067F9CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrakeThatWall;
+			productName = BrakeThatWall;
+			productReference = 232A306D1E638C3C0067F9CC /* BrakeThatWall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		232A30861E638C3C0067F9CC /* BrakeThatWallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232A309E1E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallTests" */;
+			buildPhases = (
+				232A30831E638C3C0067F9CC /* Sources */,
+				232A30841E638C3C0067F9CC /* Frameworks */,
+				232A30851E638C3C0067F9CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				232A30891E638C3C0067F9CC /* PBXTargetDependency */,
+			);
+			name = BrakeThatWallTests;
+			productName = BrakeThatWallTests;
+			productReference = 232A30871E638C3C0067F9CC /* BrakeThatWallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		232A30911E638C3C0067F9CC /* BrakeThatWallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232A30A11E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallUITests" */;
+			buildPhases = (
+				232A308E1E638C3C0067F9CC /* Sources */,
+				232A308F1E638C3C0067F9CC /* Frameworks */,
+				232A30901E638C3C0067F9CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				232A30941E638C3C0067F9CC /* PBXTargetDependency */,
+			);
+			name = BrakeThatWallUITests;
+			productName = BrakeThatWallUITests;
+			productReference = 232A30921E638C3C0067F9CC /* BrakeThatWallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		232A30651E638C3C0067F9CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Carlo Albino";
+				TargetAttributes = {
+					232A306C1E638C3C0067F9CC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 44JW5262XQ;
+						ProvisioningStyle = Automatic;
+					};
+					232A30861E638C3C0067F9CC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 44JW5262XQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 232A306C1E638C3C0067F9CC;
+					};
+					232A30911E638C3C0067F9CC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 44JW5262XQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 232A306C1E638C3C0067F9CC;
+					};
+				};
+			};
+			buildConfigurationList = 232A30681E638C3C0067F9CC /* Build configuration list for PBXProject "BrakeThatWall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 232A30641E638C3C0067F9CC;
+			productRefGroup = 232A306E1E638C3C0067F9CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				232A306C1E638C3C0067F9CC /* BrakeThatWall */,
+				232A30861E638C3C0067F9CC /* BrakeThatWallTests */,
+				232A30911E638C3C0067F9CC /* BrakeThatWallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		232A306B1E638C3C0067F9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232A307C1E638C3C0067F9CC /* Main.storyboard in Resources */,
+				232A30731E638C3C0067F9CC /* GameScene.sks in Resources */,
+				232A307E1E638C3C0067F9CC /* Assets.xcassets in Resources */,
+				232A30811E638C3C0067F9CC /* LaunchScreen.storyboard in Resources */,
+				232A30751E638C3C0067F9CC /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A30851E638C3C0067F9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A30901E638C3C0067F9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		232A30691E638C3C0067F9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232A30771E638C3C0067F9CC /* GameScene.swift in Sources */,
+				232A30791E638C3C0067F9CC /* GameViewController.swift in Sources */,
+				232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A30831E638C3C0067F9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232A308C1E638C3C0067F9CC /* BrakeThatWallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232A308E1E638C3C0067F9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232A30971E638C3C0067F9CC /* BrakeThatWallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		232A30891E638C3C0067F9CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 232A306C1E638C3C0067F9CC /* BrakeThatWall */;
+			targetProxy = 232A30881E638C3C0067F9CC /* PBXContainerItemProxy */;
+		};
+		232A30941E638C3C0067F9CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 232A306C1E638C3C0067F9CC /* BrakeThatWall */;
+			targetProxy = 232A30931E638C3C0067F9CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		232A307A1E638C3C0067F9CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232A307B1E638C3C0067F9CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		232A307F1E638C3C0067F9CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232A30801E638C3C0067F9CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		232A30991E638C3C0067F9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		232A309A1E638C3C0067F9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		232A309C1E638C3C0067F9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "carloalbino.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		232A309D1E638C3C0067F9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "carloalbino.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		232A309F1E638C3C0067F9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carloalbino.BrakeThatWallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrakeThatWall.app/BrakeThatWall";
+			};
+			name = Debug;
+		};
+		232A30A01E638C3C0067F9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carloalbino.BrakeThatWallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrakeThatWall.app/BrakeThatWall";
+			};
+			name = Release;
+		};
+		232A30A21E638C3C0067F9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carloalbino.BrakeThatWallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BrakeThatWall;
+			};
+			name = Debug;
+		};
+		232A30A31E638C3C0067F9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 44JW5262XQ;
+				INFOPLIST_FILE = BrakeThatWallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = carloalbino.BrakeThatWallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BrakeThatWall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		232A30681E638C3C0067F9CC /* Build configuration list for PBXProject "BrakeThatWall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232A30991E638C3C0067F9CC /* Debug */,
+				232A309A1E638C3C0067F9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		232A309B1E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232A309C1E638C3C0067F9CC /* Debug */,
+				232A309D1E638C3C0067F9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		232A309E1E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232A309F1E638C3C0067F9CC /* Debug */,
+				232A30A01E638C3C0067F9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		232A30A11E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232A30A21E638C3C0067F9CC /* Debug */,
+				232A30A31E638C3C0067F9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 232A30651E638C3C0067F9CC /* Project object */;
+}
