@@ -10,13 +10,13 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class Ball : Collider
+class Ball : SKSpriteNode
 {
     var ballPower : Int = 20
     
-    override init(_ spriteTexture : SKTexture)
+    init(_ spriteTexture : SKTexture?)
     {
-        super.init(spriteTexture)
+        super.init(texture : spriteTexture, color : UIColor.clear, size : (spriteTexture?.size())!)
         
         self.name = "ball"
         self.size.width = 32
@@ -42,38 +42,13 @@ class Ball : Collider
         fatalError("init(coder:) has not been implemented")
     }
     
-    func shootBall()
+    public func shootBall()
     {
-        physicsBody?.applyImpulse(CGVector(dx: -ballPower, dy: -ballPower))
+        physicsBody?.applyImpulse(CGVector(dx: ballPower, dy: ballPower))
     }
     
-    func didBegin(_ contact: SKPhysicsContact)
-    {
-
-        SortPhysicsBodies(contact: contact)
+    public func Update(_ currentTime: TimeInterval) {
         
-        if (((firstBody?.categoryBitMask)! & CollisionTags.Ball != 0) &&
-            ((secondBody?.categoryBitMask)! & CollisionTags.Bricks != 0)){
-            secondBody?.node?.removeFromParent()
-            //print("Ball and brick hit")
-        }
-        
-        if (((firstBody?.categoryBitMask)! & CollisionTags.Bricks != 0) &&
-            ((secondBody?.categoryBitMask)! & CollisionTags.Ball != 0)) {
-            //print("Brick and ball hit")
-        }
-        
-        if (((firstBody?.categoryBitMask)! & CollisionTags.Ball != 0) &&
-            ((secondBody?.categoryBitMask)! & CollisionTags.Paddle != 0)) {
-            //print("Ball and paddle hit")
-        }
-        
-        if (((firstBody?.categoryBitMask)! & CollisionTags.Paddle != 0) &&
-            ((secondBody?.categoryBitMask)! & CollisionTags.Ball != 0)) {
-            //print("Paddle and ball hit")
-        }
     }
-    
-    
     
 }

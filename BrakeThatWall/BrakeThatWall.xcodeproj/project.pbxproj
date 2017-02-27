@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2329ACAE1E64939100F62D35 /* Collider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329ACAD1E64939100F62D35 /* Collider.swift */; };
+		2329ACAE1E64939100F62D35 /* CollisionTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329ACAD1E64939100F62D35 /* CollisionTags.swift */; };
 		2329ACB01E6496C900F62D35 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329ACAF1E6496C900F62D35 /* Ball.swift */; };
 		232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30701E638C3C0067F9CC /* AppDelegate.swift */; };
 		232A30731E638C3C0067F9CC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 232A30721E638C3C0067F9CC /* GameScene.sks */; };
@@ -19,6 +19,7 @@
 		232A30811E638C3C0067F9CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232A307F1E638C3C0067F9CC /* LaunchScreen.storyboard */; };
 		232A308C1E638C3C0067F9CC /* BrakeThatWallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A308B1E638C3C0067F9CC /* BrakeThatWallTests.swift */; };
 		232A30971E638C3C0067F9CC /* BrakeThatWallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30961E638C3C0067F9CC /* BrakeThatWallUITests.swift */; };
+		236D647F1E64C6A0008C6C85 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D647E1E64C6A0008C6C85 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2329ACAD1E64939100F62D35 /* Collider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collider.swift; sourceTree = "<group>"; };
+		2329ACAD1E64939100F62D35 /* CollisionTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionTags.swift; sourceTree = "<group>"; };
 		2329ACAF1E6496C900F62D35 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		232A306D1E638C3C0067F9CC /* BrakeThatWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrakeThatWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232A30701E638C3C0067F9CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		232A30921E638C3C0067F9CC /* BrakeThatWallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrakeThatWallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		232A30961E638C3C0067F9CC /* BrakeThatWallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrakeThatWallUITests.swift; sourceTree = "<group>"; };
 		232A30981E638C3C0067F9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236D647E1E64C6A0008C6C85 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 		232A30A41E6390AE0067F9CC /* GameClasses */ = {
 			isa = PBXGroup;
 			children = (
-				2329ACAD1E64939100F62D35 /* Collider.swift */,
+				2329ACAD1E64939100F62D35 /* CollisionTags.swift */,
 				2329ACAF1E6496C900F62D35 /* Ball.swift */,
+				236D647E1E64C6A0008C6C85 /* DataManager.swift */,
 			);
 			name = GameClasses;
 			path = ..;
@@ -289,7 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2329ACB01E6496C900F62D35 /* Ball.swift in Sources */,
-				2329ACAE1E64939100F62D35 /* Collider.swift in Sources */,
+				236D647F1E64C6A0008C6C85 /* DataManager.swift in Sources */,
+				2329ACAE1E64939100F62D35 /* CollisionTags.swift in Sources */,
 				232A30771E638C3C0067F9CC /* GameScene.swift in Sources */,
 				232A30791E638C3C0067F9CC /* GameViewController.swift in Sources */,
 				232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */,

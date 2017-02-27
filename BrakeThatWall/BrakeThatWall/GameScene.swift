@@ -10,89 +10,131 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
+    
+    var dataManager : DataManager = DataManager()
+    
     var playerPaddle = SKSpriteNode()
     var ball : Ball = Ball(SKTexture(imageNamed: "Circle"))
     
-    var isTouching = false
-
+    var scoreDisplay : SKLabelNode?
+    var livesDisplay : SKLabelNode?
+    
+    var canPlay = false
+    var isGameOver = false
     
     override func didMove(to view: SKView) {
+        // Allow physics collisions
         self.physicsWorld.contactDelegate = self
         
+        // Set UI
+        scoreDisplay = self.childNode(withName: "//scoreNum") as? SKLabelNode
+        livesDisplay = self.childNode(withName: "//livesNum") as? SKLabelNode
+        
+        // Set player paddle
         playerPaddle = self.childNode(withName: "playerPaddle") as! SKSpriteNode
         playerPaddle.physicsBody?.categoryBitMask = CollisionTags.Paddle
 
+        // Set screen borders
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
-        
         border.friction = 0;
         border.restitution = 1;
         border.categoryBitMask = CollisionTags.Wall
-        
         self.physicsBody = border
-        
-        self.addChild(ball)
-        ball.shootBall()
         
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         for touch in touches
         {
-            let location = touch.location(in: self)
+            if(!canPlay && !isGameOver)
+            {
+                // Touch to start the game
+                
+                // Set ball
+                ball = Ball(SKTexture(imageNamed: "Circle"))
+                self.addChild(ball)
+                ball.position.y = playerPaddle.position.y + 50
+                ball.shootBall()
+                
+                canPlay = true
+            }
             
-            playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.2))
-            
-            isTouching = true
+            if(canPlay && !isGameOver)
+            {
+                // Move paddle to touch position
+                let location = touch.location(in: self)
+                playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.2))
+            }
         }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         for touch in touches
         {
-            let location = touch.location(in: self)
-            
-            playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.05))
-            
-            isTouching = true
+            if(canPlay && !isGameOver)
+            {
+                // Move paddle to touch position
+                let location = touch.location(in: self)
+                playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.05))
+            }
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isTouching = false
+
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isTouching = false
+
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        ball.didBegin(contact)
+        // Sort collisions
+        
+        var firstBody : SKPhysicsBody? = nil
+        var secondBody : SKPhysicsBody? = nil
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        // Check cases
+        
+        if (((firstBody?.categoryBitMask)! & CollisionTags.Ball != 0) && ((secondBody?.categoryBitMask)! & CollisionTags.Bricks != 0)){
+            // print("Ball and brick hit")
+            
+            // Destroy brick
+            secondBody?.node?.removeFromParent()
+            dataManager.AddScore(125)
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
+        // Display UI
+        scoreDisplay?.text = String(dataManager.GetScore())
+        livesDisplay?.text = String(dataManager.GetLives())
         
-        if(isTouching == false)
+        // Check for loss
+        if(canPlay)
         {
-            playerPaddle.run(SKAction.moveTo(x: ball.position.x, duration: 0.05))
-        }
-        
-        // How to detect collisions on specific objects?
-        /*for node in (ball.physicsBody?.allContactedBodies())!
-        {
-            if(node.self == playerPaddle || node.self == self)
+            if(ball.position.y < playerPaddle.position.y - 50)
             {
-                let randomDir = CGFloat(arc4random_uniform(10)) - 5
+                ball.removeFromParent()
+                dataManager.AddLives(-1)
+                canPlay = false;
                 
-                let dirMagnitude : Float = sqrt(pow(Float((ball.physicsBody?.velocity.dx)!), 2) + pow(Float((ball.physicsBody?.velocity.dy)!), 2))
-                let x : Float = Float((ball.physicsBody?.velocity.dx)!)
-                let y : Float = Float((ball.physicsBody?.velocity.dy)!)
-                
-                let dir : CGVector = CGVector(dx: CGFloat((x / dirMagnitude) * Float(ballPower)), dy: CGFloat((y / dirMagnitude) * Float(ballPower)))
-                
-                ball.physicsBody?.applyImpulse(CGVector(dx: dir.dx + randomDir, dy: dir.dy + randomDir))
+                if(dataManager.GetLives() <= 0)
+                {
+                    isGameOver = true
+                }
             }
-        }*/
+        }
     }
 
 }
