@@ -9,26 +9,30 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate{
     var playerPaddle = SKSpriteNode()
-    var ball = SKSpriteNode()
-    
-    var ballPower : Int = 20
+    var ball : Ball = Ball(SKTexture(imageNamed: "Circle"))
     
     var isTouching = false
+
     
     override func didMove(to view: SKView) {
+        self.physicsWorld.contactDelegate = self
+        
         playerPaddle = self.childNode(withName: "playerPaddle") as! SKSpriteNode
-        ball = self.childNode(withName: "ball") as! SKSpriteNode
-        
-        ball.physicsBody?.applyImpulse(CGVector(dx: -ballPower, dy: -ballPower))
-        
+        playerPaddle.physicsBody?.categoryBitMask = CollisionTags.Paddle
+
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
         
         border.friction = 0;
         border.restitution = 1;
+        border.categoryBitMask = CollisionTags.Wall
         
         self.physicsBody = border
+        
+        self.addChild(ball)
+        ball.shootBall()
+        
     }
     
     
@@ -62,14 +66,19 @@ class GameScene: SKScene {
         isTouching = false
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        ball.didBegin(contact)
+    }
+    
     override func update(_ currentTime: TimeInterval) {
+        
         if(isTouching == false)
         {
             playerPaddle.run(SKAction.moveTo(x: ball.position.x, duration: 0.05))
         }
         
         // How to detect collisions on specific objects?
-        for node in (ball.physicsBody?.allContactedBodies())!
+        /*for node in (ball.physicsBody?.allContactedBodies())!
         {
             if(node.self == playerPaddle || node.self == self)
             {
@@ -83,6 +92,7 @@ class GameScene: SKScene {
                 
                 ball.physicsBody?.applyImpulse(CGVector(dx: dir.dx + randomDir, dy: dir.dy + randomDir))
             }
-        }
+        }*/
     }
+
 }

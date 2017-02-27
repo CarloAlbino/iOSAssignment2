@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2329ACAE1E64939100F62D35 /* Collider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329ACAD1E64939100F62D35 /* Collider.swift */; };
+		2329ACB01E6496C900F62D35 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329ACAF1E6496C900F62D35 /* Ball.swift */; };
 		232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A30701E638C3C0067F9CC /* AppDelegate.swift */; };
 		232A30731E638C3C0067F9CC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 232A30721E638C3C0067F9CC /* GameScene.sks */; };
 		232A30751E638C3C0067F9CC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 232A30741E638C3C0067F9CC /* Actions.sks */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2329ACAD1E64939100F62D35 /* Collider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collider.swift; sourceTree = "<group>"; };
+		2329ACAF1E6496C900F62D35 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		232A306D1E638C3C0067F9CC /* BrakeThatWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrakeThatWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232A30701E638C3C0067F9CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		232A30721E638C3C0067F9CC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		232A306F1E638C3C0067F9CC /* BrakeThatWall */ = {
 			isa = PBXGroup;
 			children = (
+				232A30A41E6390AE0067F9CC /* GameClasses */,
 				232A30701E638C3C0067F9CC /* AppDelegate.swift */,
 				232A30721E638C3C0067F9CC /* GameScene.sks */,
 				232A30741E638C3C0067F9CC /* Actions.sks */,
@@ -132,6 +137,16 @@
 				232A30981E638C3C0067F9CC /* Info.plist */,
 			);
 			path = BrakeThatWallUITests;
+			sourceTree = "<group>";
+		};
+		232A30A41E6390AE0067F9CC /* GameClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2329ACAD1E64939100F62D35 /* Collider.swift */,
+				2329ACAF1E6496C900F62D35 /* Ball.swift */,
+			);
+			name = GameClasses;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2329ACB01E6496C900F62D35 /* Ball.swift in Sources */,
+				2329ACAE1E64939100F62D35 /* Collider.swift in Sources */,
 				232A30771E638C3C0067F9CC /* GameScene.swift in Sources */,
 				232A30791E638C3C0067F9CC /* GameViewController.swift in Sources */,
 				232A30711E638C3C0067F9CC /* AppDelegate.swift in Sources */,
@@ -526,6 +543,7 @@
 				232A309D1E638C3C0067F9CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		232A309E1E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +552,7 @@
 				232A30A01E638C3C0067F9CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		232A30A11E638C3C0067F9CC /* Build configuration list for PBXNativeTarget "BrakeThatWallUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +561,7 @@
 				232A30A31E638C3C0067F9CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
