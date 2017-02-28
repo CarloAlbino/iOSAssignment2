@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 import GameplayKit
+import Accelerate
 
 class Ball : SKSpriteNode
 {
@@ -44,7 +45,7 @@ class Ball : SKSpriteNode
     
     public func shootBall()
     {
-        physicsBody?.applyImpulse(CGVector(dx: ballPower, dy: ballPower))
+        physicsBody?.applyImpulse(CGVector(dx: Int(arc4random_uniform(UInt32(ballPower) + UInt32(ballPower))) - ballPower, dy: ballPower))
     }
     
     public func Update(_ currentTime: TimeInterval) {

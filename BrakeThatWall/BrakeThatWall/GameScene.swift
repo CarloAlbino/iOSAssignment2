@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import Accelerate
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
@@ -22,7 +23,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var canPlay = false
     var isGameOver = false
     
-    override func didMove(to view: SKView) {
+    // Ball control
+    var isHolding = false
+    var ballOnPaddle = false
+    
+    override func didMove(to view: SKView)
+    {
         // Allow physics collisions
         self.physicsWorld.contactDelegate = self
         
@@ -67,32 +73,51 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                 playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.2))
             }
         }
+        
+        // Hold the ball when touch and holding the screen
+        isHolding = true;
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     {
+        // Move paddle to touch position
         for touch in touches
         {
             if(canPlay && !isGameOver)
             {
-                // Move paddle to touch position
                 let location = touch.location(in: self)
                 playerPaddle.run(SKAction.moveTo(x: location.x, duration: 0.05))
             }
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        // Let go of ball if holding it
+        if(isHolding && ballOnPaddle)
+        {
+            isHolding = false
+            ballOnPaddle = false
+            
+            ball.shootBall()
+        }
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        // Let go of ball if holding it
+        if(isHolding && ballOnPaddle)
+        {
+            isHolding = false
+            ballOnPaddle = false
+            
+            ball.shootBall()
+        }
     }
     
-    func didBegin(_ contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact)
+    {
         // Sort collisions
-        
         var firstBody : SKPhysicsBody? = nil
         var secondBody : SKPhysicsBody? = nil
         
@@ -113,9 +138,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             secondBody?.node?.removeFromParent()
             dataManager.AddScore(125)
         }
+        
+        if (((firstBody?.categoryBitMask)! & CollisionTags.Ball != 0) && ((secondBody?.categoryBitMask)! & CollisionTags.Paddle != 0)){
+            // print("Ball and paddle hit")
+            
+            // Hold the ball
+            if(isHolding)
+            {
+                ball.physicsBody?.velocity = CGVector.zero
+                ballOnPaddle = true
+            }
+        }
     }
     
-    override func update(_ currentTime: TimeInterval) {
+    override func update(_ currentTime: TimeInterval)
+    {
         // Display UI
         scoreDisplay?.text = String(dataManager.GetScore())
         livesDisplay?.text = String(dataManager.GetLives())
@@ -133,6 +170,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                 {
                     isGameOver = true
                 }
+            }
+            
+            if(ballOnPaddle)
+            {
+                ball.position.x = playerPaddle.position.x
             }
         }
     }
