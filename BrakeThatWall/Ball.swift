@@ -14,7 +14,7 @@ import Accelerate
 class Ball : SKSpriteNode
 {
     var ballPower : Int = 20
-    
+
     init(_ spriteTexture : SKTexture?)
     {
         super.init(texture : spriteTexture, color : UIColor.clear, size : (spriteTexture?.size())!)

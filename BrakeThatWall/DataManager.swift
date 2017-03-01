@@ -14,7 +14,7 @@ class DataManager
 {
     var lives : Int = 3
     var score : Int = 0
-    
+
     public func GetLives() -> Int
     {
         return lives
@@ -45,5 +45,16 @@ class DataManager
         }
     }
     
+    public func IsLoss() -> Bool
+    {
+        if(lives <= 0)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
     
 }
