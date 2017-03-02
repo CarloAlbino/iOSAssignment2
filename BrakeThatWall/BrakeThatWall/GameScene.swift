@@ -110,6 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                 if let view = self.view {
                     // Load the SKScene from 'MainMenu.sks'
                     if let scene = SKScene(fileNamed: "MainMenu") {
+                        
                         // Set the scale mode to scale to fit the window
                         scene.scaleMode = .aspectFill
                         
@@ -157,10 +158,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             // Return the paddle back to white
             playerPaddle.color = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
     }
     
     func didBegin(_ contact: SKPhysicsContact)

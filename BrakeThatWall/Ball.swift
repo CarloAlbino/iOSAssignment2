@@ -17,6 +17,7 @@ class Ball : SKSpriteNode
 
     init(_ spriteTexture : SKTexture?)
     {
+        // Set up ball values
         super.init(texture : spriteTexture, color : UIColor.clear, size : (spriteTexture?.size())!)
         
         self.name = "ball"
@@ -45,6 +46,7 @@ class Ball : SKSpriteNode
     
     public func shootBall()
     {
+        // Shoot the ball up in a random direction
         physicsBody?.applyImpulse(CGVector(dx: Int(arc4random_uniform(UInt32(ballPower) + UInt32(ballPower))) - ballPower, dy: ballPower))
     }
     

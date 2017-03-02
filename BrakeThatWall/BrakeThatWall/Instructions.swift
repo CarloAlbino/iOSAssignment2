@@ -17,8 +17,8 @@ class Instructions : SKScene
     
     override func didMove(to view: SKView)
     {
+        // Set button nodes and label
         backButton = self.childNode(withName: "//backButton") as! SKSpriteNode
-        
         backLabel = self.childNode(withName: "//backText") as? SKLabelNode
     }
     
@@ -26,7 +26,7 @@ class Instructions : SKScene
     {
         let positionInScene = touches.first?.location(in: self)
         let touchedNode = self.atPoint(positionInScene!)
-        if(touchedNode.name == backButton.name || touchedNode.name == backLabel?.name)
+        if(touchedNode.name == backButton.name || touchedNode.name == backLabel?.name)  // Back button
         {
             backButton.color = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
         }
